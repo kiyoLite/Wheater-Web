@@ -2,6 +2,14 @@
 
 This application allows you to know the current temperature, wind speed, humidity and other weather conditions of **any city** in the world.
 
+## Table of Contents
+
+- [Feature](#feature)
+
+- [Usage](#usage)
+
+- [Technologies Used](#technologies-used)
+
 ## Feature 
 
 * Reponsive design
@@ -19,6 +27,6 @@ This application allows you to know the current temperature, wind speed, humidit
 ## Usage 
 
 Create a git clone from repository, Open your browser and navigate to http://localhost:4321 to access the app. Or 
-Use this Link
+Use this [Link](https://kiyolite.github.io/Wheater-Web/)
 
 
