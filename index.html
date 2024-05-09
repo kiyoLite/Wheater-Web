@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="Light">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Weather</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital@1&family=Mukta:wght@200&family=Pacifico&display=swap"
+        rel="stylesheet">
+
+</head>
+
+
+<body>
+    <article>
+        <header>
+            <nav>
+                <div id="ContainerButtons">
+                    <button id="Theme">
+
+                        <img src="imagenes/sun.svg" alt="Tema" id="DarkOrLight">
+                    </button>
+                    <button id="Unit">
+                        <img src="imagenes/degree-farenheit.svg" alt="Unit Tempeture" id="FarenheitOrCelcius">
+                    </button>
+
+                </div>
+                <form id="Search">
+
+                    <input type="text" placeholder="City" id="InputCity" spellcheck="false" autocomplete="off">
+                    <input type="image" src="imagenes/MagnifiyingGlass.svg" id="ButtonSubmit">
+                </form>
+
+            </nav>
+
+        </header>
+
+        <main>
+            <section id="GeneralInformation">
+                <img src="imagenes/clear.png" id="Image">
+                <div>
+
+                    <P id="temperature" class="information"></P>
+                    <P id="Climate" class="information"> </P>
+                </div>
+
+
+
+            </section>
+            <section id="SpecifikIformation">
+
+
+                <figure>
+                    <img src="imagenes/thermometer-full.svg" alt="Image temperature" class="IconMoreInformation">
+                    <figcaption>
+                        <p id="Result"><strong class="highlight">Temperature</strong> </p>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="imagenes/compass.svg" alt=" Image Compass" class="IconMoreInformation">
+                    <figcaption>
+                        <p id="AcronymCountry"><strong class="highlight">Country</strong></p>
+                    </figcaption>
+                </figure>
+
+
+
+                <figure>
+                    <img src="imagenes/wind.svg" alt="Image Wind" class="IconMoreInformation">
+                    <figcaption>
+                        <p id="UnitWind"><strong class="highlight">Wind</strong> </p>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="imagenes/umbrella.svg" alt=" Image Umbrella" class="IconMoreInformation">
+                    <figcaption>
+                        <p id="UnitHumidity"><strong class="highlight">Humidity</strong> </p>
+                    </figcaption>
+                </figure>
+
+
+
+            </section>
+
+        </main>
+
+    </article>
+
+
+
+    <script src="logical.js"></script>
+</body>
+
+</html>

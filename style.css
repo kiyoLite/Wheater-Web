@@ -1,0 +1,272 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+/* Dark-ligth theme Variables */
+:root {
+    --PrimaryColor: #c4c4c4;
+    --InvertColorButtons: 100%;
+    --PrincipalColorBackground: #192135e5;
+    --SecundaryColorBackgorund: #ffffff21;
+    --highlightBackgroundColor: #24282e4d;
+    --IconsInvert: 70%;
+    --PrincipalFontFamily: lato, Arial, Helvetica, sans-serif;
+}
+
+:root[data-theme="Light"] {
+    --PrimaryColor: #1d1919;
+    --InvertColorButtons: 0%;
+    --PrincipalColorBackground: #ffffff;
+    --SecundaryColorBackgorund: #e8e8e8;
+    --highlightBackgroundColor: #60677228;
+    --IconsInvert: 0%;
+    --PrincipalFontFamily: lato, Arial, Helvetica, sans-serif;
+}
+
+
+/* Styles General  */
+body {
+    height: 100vh;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    background: radial-gradient(circle, var(--SecundaryColorBackgorund) 10%, transparent 11%);
+    background-color: #0000;
+    background-size: auto;
+    background-size: 1em 1em;
+    background-color: var(--PrincipalColorBackground);
+    opacity: 1;
+}
+
+article {
+    display: flex;
+    width: 800px;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+
+
+
+}
+
+header {
+    height: 60px;
+
+}
+
+
+/* Styles header */
+nav {
+    display: grid;
+    grid-template-columns: 3fr 7fr;
+    flex-grow: 1;
+    align-items: center;
+    height: 100%;
+}
+
+#ButtonSubmit {
+    height: 30px;
+    width: 30px;
+    user-select: none;
+    filter: invert(var(--InvertColorButtons));
+
+}
+
+#ButtonSubmit:hover {
+
+    animation-name: highlightSubmit;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+button {
+    background: none;
+    border: 0;
+    width: fit-content;
+    height: fit-content;
+    user-select: none;
+
+}
+
+#DarkOrLight,
+#FarenheitOrCelcius {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    opacity: 50%;
+    filter: invert(var(--InvertColorButtons));
+}
+
+
+
+#InputCity {
+    border: none;
+    border-bottom: 2px solid var(--PrimaryColor);
+    background: 0;
+    min-width: 0;
+    flex: 1;
+    max-width: 80%;
+    font-family: var(--PrincipalFontFamily);
+    font-size: 15px;
+    letter-spacing: 2px;
+    color: var(--PrimaryColor);
+}
+
+#InputCity.InputCityError {
+    color: #b95e5e;
+    animation-name: Error;
+    animation-duration: 0.5s;
+}
+
+#InputCity.InputCityError::placeholder {
+    color: rgb(179, 51, 51);
+}
+
+#InputCity:focus {
+    outline: none;
+}
+
+form {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    margin-right: 20px;
+}
+
+#ContainerButtons {
+    display: flex;
+    gap: 10px;
+    margin-left: 20px;
+}
+
+
+
+
+/* styles main */
+main {
+    display: flex;
+    width: 100%;
+    flex-grow: 1;
+    flex-direction: column;
+
+}
+
+.information {
+    font-family: lato;
+    color: var(--PrimaryColor);
+
+    width: 100%;
+}
+
+#Climate {
+    letter-spacing: 1px;
+
+}
+
+#GeneralInformation {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#Image {
+    width: 200px;
+    height: 200px;
+    animation-name: MoveIMage;
+    animation-duration: 1.5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+
+}
+
+/* #temperature {} */
+
+/* styles more information*/
+#SpecifikIformation {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+}
+
+figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+
+figure img {
+    width: 30px;
+    height: 30px;
+    filter: invert(var(--IconsInvert));
+}
+
+figcaption p {
+    font-family: var(--PrincipalFontFamily);
+    color: var(--PrimaryColor);
+}
+
+.highlight {
+    background-color: var(--highlightBackgroundColor);
+    padding: 3px;
+    border-radius: 110px;
+    background-size: 0px 30px;
+    display: block;
+    width: 100px;
+    user-select: none;
+    color: var(--PrincipalColorText);
+    font-family: var(--PrincipalFontFamily)
+}
+
+/* aniamtions */
+@keyframes highlightSubmit {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes MoveIMage {
+    0% {
+
+        transform: scale(1)
+    }
+
+
+    100% {
+
+        transform: scale(1.05);
+    }
+}
+
+@keyframes Error {
+
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(10px)
+    }
+}
+
+@media (max-width:502px) {
+    #InputCity.InputCityError {
+        font-size: 12.5px;
+        letter-spacing: 0;
+    }
+}
